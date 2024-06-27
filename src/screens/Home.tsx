@@ -1,10 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Home(): JSX.Element {
     return (
-        <View>
+        <SafeAreaView>
             <Text>Home</Text>
-        </View>
+        </SafeAreaView>
     )
 }
