@@ -29,7 +29,7 @@ const MovieItem = ({ movie, size, coverType }: MovieItemProps): JSX.Element => {
                     <Text style={styles.movieTitle}>{movie.title}</Text>
                     <View style={styles.ratingContainer}>
                         <FontAwesome name="star" size={16} color="yellow" />
-                        <Text style={styles.rating}>{movie.vote_average.toFixed(1)}</Text>
+                        <Text style={styles.rating}>{movie?.vote_average.toFixed(1)}</Text>
                     </View>
                 </LinearGradient>
             </ImageBackground>

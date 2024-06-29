@@ -8,7 +8,16 @@ import Favorite from '../screens/Favorite'
 const Tab = createBottomTabNavigator()
 
 const BottomTabNavigator = (): JSX.Element => (
-    <Tab.Navigator>
+    <Tab.Navigator
+        screenOptions={{
+            tabBarStyle: {
+                backgroundColor: '#1e1e1e', // Set your desired background color here
+                borderTopColor: 'transparent', // Optional: to remove the top border
+            },
+            tabBarActiveTintColor: '#FFFFFF', // Active tab icon color
+            tabBarInactiveTintColor: '#808080', // Inactive tab icon color
+        }}
+    >
         <Tab.Screen
             name="Home"
             component={Home}

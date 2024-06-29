@@ -2,9 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
 import type { MovieListProps, Movie } from '../../types/app'
-import { API_ACCESS_TOKEN } from '@env'
+import { API_ACCESS_TOKEN, API_URL_MOVIE } from '@env'
 import MovieItem from './MovieItem'
-
 const coverImageSize = {
     backdrop: {
         width: 280,
@@ -24,7 +23,7 @@ const MovieList = ({ title, path, coverType }: MovieListProps): JSX.Element => {
     }, [])
 
     const getMovieList = (): void => {
-        const url = `https://api.themoviedb.org/3/${path}`
+        const url = `${API_URL_MOVIE}${path}`
         const options = {
             method: 'GET',
             headers: {
@@ -90,6 +89,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '900',
+        color: 'white'
     },
     movieList: {
         paddingLeft: 4,

@@ -2,6 +2,7 @@ import React from 'react'
 import { ScrollView, View, StatusBar, StyleSheet } from 'react-native'
 import MovieList from '../components/movies/MovieList'
 import type { MovieListProps } from '../types/app'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const movieLists: MovieListProps[] = [
     {
@@ -28,28 +29,34 @@ const movieLists: MovieListProps[] = [
 
 const Home = (): JSX.Element => {
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                {movieLists.map((movieList) => (
-                    <MovieList
-                        title={movieList.title}
-                        path={movieList.path}
-                        coverType={movieList.coverType}
-                        key={movieList.title}
-                    />
-                ))}
-                <StatusBar translucent={false} />
-            </View>
-        </ScrollView>
+        <SafeAreaView style={styles.containerView}>
+            <ScrollView>
+                <View style={styles.container}>
+                    {movieLists.map((movieList) => (
+                        <MovieList
+                            title={movieList.title}
+                            path={movieList.path}
+                            coverType={movieList.coverType}
+                            key={movieList.title}
+                        />
+                    ))}
+                    <StatusBar translucent={false} />
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: StatusBar.currentHeight ?? 32,
         alignItems: 'center',
         justifyContent: 'center',
-        rowGap: 16,
+        rowGap: 20,
+    },
+    containerView: {
+        flex: 1,
+        paddingHorizontal: 10,
+        backgroundColor: '#1e1e1e',
     },
 })
 

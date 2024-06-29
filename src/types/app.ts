@@ -4,14 +4,21 @@ export interface MovieListProps {
   coverType: 'poster' | 'backdrop'
 }
 
-interface genre {
+interface Genre {
   id: number;
   name: string;
 }
 
+export interface Cast {
+  profile_path: string
+  name: string
+  character: string;
+  id: number;
+}
+
 export interface Movie {
   backdrop_path: string
-  genres: genre[]
+  genres: Genre[]
   homepage: string
   id: number
   original_title: string
