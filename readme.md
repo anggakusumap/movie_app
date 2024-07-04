@@ -15,10 +15,11 @@
 - **ID:** 1957887840-818
 - **Email:** hello.mdzaky@gmail.com
 
-## I Gede Angga Kusuma Putra
+## I Gede Angga Kusuma Putra (Aktif)
 - **Phone:** 6281339003609
 - **ID:** 1957887840-82
 - **Email:** gedeanggakp@gmail.com
+- **Tugas:** membuat List, Search, dan Favorites Movie
 
 ## Hanisah Fildza Annafisah (Tidak Aktif)
 - **Phone:** 628971636350
